@@ -72,7 +72,7 @@ int main() {
 
 **Penjelasan.** Baris `int nilai[5];` meminta 5 sel `int` berurutan di memori dengan indeks 0 sampai 4. Kelima sel kemudian diisi satu per satu lewat penugasan `nilai[indeks] = angka`. Perulangan `for` dengan variabel `i` dari 0 hingga `i < 5` berfungsi sebagai "penunjuk" indeks: setiap putaran mencetak `nilai[i]` lalu pindah baris dengan `endl`. Syarat `i < 5` (bukan `i <= 5`) penting karena indeks 5 tidak ada; mengaksesnya berarti membaca memori di luar array.
 
-**Hasil yang diharapkan:** lima baris, yaitu `80`, `85`, `90`, `75`, `95`. Program ini menunjukkan pola dasar array: *deklarasi → isi → telusuri dengan loop*.
+**Hasil yang diharapkan:** lima baris, yaitu `80`, `85`, `90`, `75`, `95`. Program ini menunjukkan pola dasar array: *deklarasi -> isi -> telusuri dengan loop*.
 
 ### 2. Program Array 2
 
@@ -470,8 +470,10 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 1
-![Output 1](output1_unguided1.jpeg)
-
+![Output_1-1](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_1/Output-Unguided1-1.png)
+![Output_1-2](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_1/Output-Unguided1-2.png)
+![Output_1-3](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_1/Output-Unguided1-3.png)
+![Output_1-4](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_1/Output-Unguided1-2.png)
 **Penjelasan.** Pada program ini setiap pekerjaan dipisah menjadi prosedur sendiri sehingga `main()` hanya mengatur urutan langkahnya: `isiMatriks()` untuk input, `jumlahMatriks()`, `kurangMatriks()`, dan `kaliMatriks()` untuk perhitungan, serta `tampilMatriks()` untuk output. Ukuran matriks disimpan pada konstanta `N = 3`, sehingga ukuran bisa diubah tanpa menyunting banyak baris. Array dikirim ke prosedur sebagai parameter; di C++ array selalu dikirim berupa alamat, bukan salinan, sehingga ketika `jumlahMatriks()` mengisi `hasil[i][j]`, array `hasilTambah` di `main()` ikut terisi. Parameter masukan diberi kata kunci `const` agar prosedur tidak sengaja mengubah matriks A dan B.
 
 - **Penjumlahan dan pengurangan** dilakukan elemen demi elemen: `hasil[i][j] = a[i][j] ± b[i][j]`, dengan dua loop bersarang (baris dan kolom).
@@ -538,7 +540,7 @@ int main() {
 ### Output Unguided 2 :
 
 ##### Output 2
-![Output 2](output2_unguided2.jpeg)
+![Output_2-1](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_2/Output-Unguided2-1.png)
 
 **Penjelasan.** Soal meminta dua versi: berbasis pointer dan berbasis reference, masing-masing untuk tiga variabel. Karena dua variabel saja hanya butuh satu penyimpanan sementara, tiga variabel diselesaikan dengan pola **rotasi ke kanan**: nilai `z` disimpan dulu ke `simpan`, lalu `z` diisi nilai `y`, `y` diisi nilai `x`, dan terakhir `x` diisi nilai `simpan` (nilai `z` semula). Urutan penugasan ini harus dari belakang ke depan; jika dibalik, nilai pertama tertimpa sebelum sempat disalin.
 
@@ -637,11 +639,11 @@ int main() {
 ### Output Unguided 3 :
 
 ##### Output 3
-![Output 1](output3_menu.jpeg)
-![Output 2](output3_maksimum.jpeg)
-![Output 3](output3_minimum.jpeg)
-![Output 4](output3_rata2.jpeg)
-![Output 5](output3_keluar.jpeg)
+![Output_3-1](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_3/Output-Unguided3-1.png)
+![Output_3-2](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_3/Output-Unguided3-2.png)
+![Output_3-3](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_3/Output-Unguided3-3.png)
+![Output_3-4](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_3/Output-Unguided3-4.png)
+![Output_3-5](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_3/Output-Unguided3-5.png)
 
 **Penjelasan.** Program ini mengolah array `arrA` yang berisi 10 bilangan. Setiap tugas dipisahkan sesuai ketentuan soal: dua *function* yang mengembalikan nilai (`cariMinimum()` dan `cariMaksimum()`) dan satu *procedure* bertipe `void` (`hitungRataRata()`) yang langsung mencetak hasilnya. Satu prosedur tambahan, `tampilArray()`, dibuat untuk menu nomor 1.
 
