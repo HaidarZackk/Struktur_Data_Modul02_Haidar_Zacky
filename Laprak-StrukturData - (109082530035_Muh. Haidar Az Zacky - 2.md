@@ -474,6 +474,7 @@ int main() {
 ![Output_1-2](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_1/Output-Unguided1-2.png)
 ![Output_1-3](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_1/Output-Unguided1-3.png)
 ![Output_1-4](https://github.com/HaidarZackk/Struktur_Data_Modul02_Haidar_Zacky/blob/main/SS_SOAL_1/Output-Unguided1-2.png)
+
 **Penjelasan.** Pada program ini setiap pekerjaan dipisah menjadi prosedur sendiri sehingga `main()` hanya mengatur urutan langkahnya: `isiMatriks()` untuk input, `jumlahMatriks()`, `kurangMatriks()`, dan `kaliMatriks()` untuk perhitungan, serta `tampilMatriks()` untuk output. Ukuran matriks disimpan pada konstanta `N = 3`, sehingga ukuran bisa diubah tanpa menyunting banyak baris. Array dikirim ke prosedur sebagai parameter; di C++ array selalu dikirim berupa alamat, bukan salinan, sehingga ketika `jumlahMatriks()` mengisi `hasil[i][j]`, array `hasilTambah` di `main()` ikut terisi. Parameter masukan diberi kata kunci `const` agar prosedur tidak sengaja mengubah matriks A dan B.
 
 - **Penjumlahan dan pengurangan** dilakukan elemen demi elemen: `hasil[i][j] = a[i][j] ± b[i][j]`, dengan dua loop bersarang (baris dan kolom).
